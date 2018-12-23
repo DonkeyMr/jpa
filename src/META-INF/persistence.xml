@@ -5,6 +5,11 @@
         <provider>org.hibernate.ejb.HibernatePersistence</provider>
 
         <class>com.jpa.model.Customer</class>
+        <class>com.jpa.model.Order</class>
+        <class>com.jpa.model.Manager</class>
+        <class>com.jpa.model.Department</class>
+        <class>com.jpa.model.Category</class>
+        <class>com.jpa.model.Goods</class>
 
         <properties>
             <property name="hibernate.connection.url" value="jdbc:mysql://localhost:3306/jpa"/>

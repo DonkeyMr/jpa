@@ -4,6 +4,8 @@ import lombok.Data;
 
 import javax.persistence.*;
 import java.util.Date;
+import java.util.HashSet;
+import java.util.Set;
 
 @Data
 @Table(name = "t_customer")
@@ -12,7 +14,7 @@ public class Customer {
 
     @Id
     @GeneratedValue
-    private Long id;
+    private Integer id;
 
     private String username;
 
@@ -24,4 +26,8 @@ public class Customer {
 
     @Column(name = "create_date")
     private Date createDate;
+
+    @OneToMany(mappedBy = "customer")
+    //@JoinColumn(name = "customer_id")
+    private Set<Order> orders = new HashSet<>();
 }
