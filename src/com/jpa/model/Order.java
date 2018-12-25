@@ -6,6 +6,7 @@ import javax.persistence.*;
 
 @Entity
 @Table(name = "t_order")
+@Cacheable
 @Data
 public class Order {
 

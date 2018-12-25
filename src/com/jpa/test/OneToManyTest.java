@@ -67,9 +67,15 @@ public class OneToManyTest {
     @Test
     public void testManyToOneFind() {
         Order order = entityManager.find(Order.class, 1);
-        System.out.println(order.getOrderName());
 
-        System.out.println(order.getCustomer().getUsername());
+        entityTransaction.commit();
+        entityManager.close();
+
+        entityManager = entityManagerFactory.createEntityManager();
+        entityTransaction = entityManager.getTransaction();
+        entityTransaction.begin();
+
+        Order order2 = entityManager.find(Order.class, 1);
     }
 
     @Test

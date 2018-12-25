@@ -28,6 +28,6 @@ public class Customer {
     private Date createDate;
 
     @OneToMany(mappedBy = "customer")
-    //@JoinColumn(name = "customer_id")
     private Set<Order> orders = new HashSet<>();
+
 }
