@@ -38,24 +38,22 @@ public class OneToManyTest {
     @Test
     public void testMaynToOnePersist() {
         Customer customer = new Customer();
-        customer.setUsername("ff");
+        customer.setUsername("bb");
         customer.setCreateDate(new Date());
         customer.setBirth(new Date());
-        customer.setEmail("ff@163.com");
-        customer.setAge(27);
+        customer.setEmail("bb@163.com");
+        customer.setAge(21);
 
         Order order = new Order();
-        order.setOrderName("order-ff");
-        order.setAmount(589d);
+        order.setOrderName("order-bb");
+        order.setAmount(552d);
         order.setCustomer(customer);
 
         Order order2 = new Order();
-        order2.setOrderName("order2-ff");
-        order2.setAmount(87d);
+        order2.setOrderName("order2-bb");
+        order2.setAmount(34d);
         order2.setCustomer(customer);
 
-        customer.getOrders().add(order);
-        customer.getOrders().add(order2);
         order.setCustomer(customer);
         order2.setCustomer(customer);
 

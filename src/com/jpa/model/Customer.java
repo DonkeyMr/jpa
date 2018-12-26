@@ -30,4 +30,11 @@ public class Customer {
     @OneToMany(mappedBy = "customer")
     private Set<Order> orders = new HashSet<>();
 
+    public Customer() {
+    }
+
+    public Customer(Integer id, Integer age) {
+        this.id = id;
+        this.age = age;
+    }
 }
